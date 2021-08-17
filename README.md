@@ -1,2 +1,3 @@
-# SolitaireGame
-Solitaire Klondike and Spider. Made with Unity.
+# Solitaire Game
+
+Solitaire Klondike and Solitaire Spider. Game made with Unity.
