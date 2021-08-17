@@ -1,0 +1,51 @@
+<!--
+unity webgl responsive
+
+source code 
+https://github.com/sno/unity-webgl-responsive
+-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Carlos Santana, Guilherme Tomiasi e Renan Yudi">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Paciência">
+    <meta property="og:description" content="Jogo de paciência Klondike e Spider. Projeto final da disciplina Estrutura de Dados 1 de 2021.">
+    <meta property="og:image" content="https://i.imgur.com/sAy7NEq.png">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/sAy7NEq.png" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Projeto ED</title>
+  </head>
+  <body>
+    <div class="webgl-wrapper">
+      <div class="aspect"></div>
+      <div class="webgl-content">
+        <div id="unityContainer">
+          <canvas id="unity-canvas" style="background: #231F20"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="MyLoader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/33b4aa5c572ddf8f64c25a35722a1497.data",
+        frameworkUrl: "Build/3170f3bd12c5cdcde4b8a8a3f56cf43f.js",
+        codeUrl: "Build/dbe2fabd3f4438051053ee633388c14a.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Unesp",
+        productName: "Projeto ED",
+        productVersion: "1.0",
+      }).then((unityInstance) => {
+        myGameInstance = unityInstance;
+      });
+    </script>
+  </body>
+</html>
